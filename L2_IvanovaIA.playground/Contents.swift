@@ -31,8 +31,3 @@ for element in array {
         }
     }
 }
-
-<<<<<<< HEAD
-=======
-// 5.
->>>>>>> 1c57aa7 (Init)
