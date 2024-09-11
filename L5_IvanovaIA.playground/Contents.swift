@@ -111,3 +111,4 @@ var scania = TruckCar(brand: "Scania", yearOfProduction: 2003, trailer: true)
 scania.actionEngine(.start)
 scania.actionWindow(.open)
 print(scania)
+
