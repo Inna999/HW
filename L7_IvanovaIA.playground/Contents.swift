@@ -4,24 +4,34 @@ import UIKit
 //2.Придумать класс, методы которого могут завершаться неудачей. Реализовать их с использованием  Error.
 
 protocol Team {
-    var teamName: String {get}      //название команды
-    var budget: Int {get set}       //бюджет команды
+    /// название команды
+    var teamName: String {get}
+    /// бюджет команды
+    var budget: Int {get set}
 }
 
 //Структура обновления на болид
 struct CarUpdate {
-    let F1Team: F1Team          //Для какой команды
-    var price: Int              //стоимость обновления
-    var readyToInstall: Bool    //готовность к установке
-    var testSuccess: Bool       //успешно пройдены испытания
+    /// для какой команды
+    let F1Team: F1Team
+    /// стоимость обновления
+    var price: Int             
+    /// готовность к установке
+    var readyToInstall: Bool
+    /// успешно пройдены испытания
+    var testSuccess: Bool
 }
 
 //Ошибки установки обновления
-enum updateError: Error {
-    case noLimit        //превышен лимит на сезон
-    case notReady       //обновление не готово к установке
-    case failedTest     //не прошло испытания
-    case noUpdating     //нет обновлений
+enum UpdateError: Error {
+    /// превышен лимит на сезон
+    case noLimit
+    /// обновление не готово к установке
+    case notReady
+    /// не прошло испытания
+    case failedTest
+    /// нет обновлений
+    case noUpdating
 }
 
 //Класс команды F1
@@ -36,9 +46,9 @@ class F1Team: Team {
     }
     
     //метод проверки обновления
-    func checkUpdating(_ update: CarUpdate) -> (CarUpdate?, updateError?) {
-        guard update.F1Team.teamName == self.teamName else {
-            return (nil, updateError.noUpdating)        //обновлений нет
+    func checkUpdating(_ update: CarUpdate) -> (CarUpdate?, UpdateError?) {
+        guard update.F1Team.teamName == teamName else {
+            return (nil, UpdateError.noUpdating)        //обновлений нет
         }
         return (update, nil)
     }
@@ -46,13 +56,13 @@ class F1Team: Team {
     //метод установки обновления на болид
     func updatingCar(_ update: CarUpdate) throws {
         guard budget + update.price <= F1Team.moneyLimitForSeason else {
-            throw updateError.noLimit
+            throw UpdateError.noLimit
         }
         guard update.readyToInstall else {
-            throw updateError.notReady
+            throw UpdateError.notReady
         }
         guard update.testSuccess else {
-            throw updateError.failedTest
+            throw UpdateError.failedTest
         }
         budget += update.price
         print("Обновление для \(teamName) установлено.")
@@ -67,11 +77,11 @@ func updateInstall(team: F1Team, update: CarUpdate) {
         //Попытка установки обновления
         do {
             try team.updatingCar(updating)
-        } catch updateError.noLimit {
+        } catch UpdateError.noLimit {
             print("Обновление для \(team.teamName) не может быть установлено. Превышен лимит на сезон!")
-        } catch updateError.notReady {
+        } catch UpdateError.notReady {
             print("Обновление для \(team.teamName) не готово к установке.")
-        } catch updateError.failedTest {
+        } catch UpdateError.failedTest {
             print("Обновление для \(team.teamName) не прошло испытания")
         } catch let error {
             print(error.localizedDescription)
