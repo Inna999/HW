@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4588DF7B-07B6-4E2F-B39D-ED1910E8328E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E612CE7-F50C-4FEC-AB4F-DF6E60923482"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "L9-L12IvanovaIA/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "3E612CE7-F50C-4FEC-AB4F-DF6E60923482 - a982cdc798fd31df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "L9-L12IvanovaIA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/inna/Desktop/test/L9-L12IvanovaIA/L9-L12IvanovaIA/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1577">
+               </Location>
+               <Location
+                  uuid = "3E612CE7-F50C-4FEC-AB4F-DF6E60923482 - a982cdc798fd319d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "L9-L12IvanovaIA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/inna/Desktop/test/L9-L12IvanovaIA/L9-L12IvanovaIA/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1601">
+               </Location>
+               <Location
+                  uuid = "3E612CE7-F50C-4FEC-AB4F-DF6E60923482 - a982cdc798fd317c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "L9-L12IvanovaIA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/inna/Desktop/test/L9-L12IvanovaIA/L9-L12IvanovaIA/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "1837">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
