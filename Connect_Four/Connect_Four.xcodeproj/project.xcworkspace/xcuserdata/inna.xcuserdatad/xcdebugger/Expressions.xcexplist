@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Game.isWin():game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "columns">
+            </PersistentString>
+            <PersistentString
+               value = "board[j][i]">
+            </PersistentString>
+            <PersistentString
+               value = "j + rows - 1 - i">
+            </PersistentString>
+            <PersistentString
+               value = "rows">
+            </PersistentString>
+            <PersistentString
+               value = "board[j + i + 1][j + 1]">
+            </PersistentString>
+            <PersistentString
+               value = "board[i][j]">
+            </PersistentString>
+            <PersistentString
+               value = "board[j + i][j]">
+            </PersistentString>
+            <PersistentString
+               value = "j + rows - 1 - i - 1">
+            </PersistentString>
+            <PersistentString
+               value = "rows - 1 - j - 1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "setBoardDimension():setBoardDimension.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "xIndex">
+            </PersistentString>
+            <PersistentString
+               value = "Int(board[board.startIndex..&lt;xIndex])">
+            </PersistentString>
+            <PersistentString
+               value = "Int(board[xIndex..&lt;board.endIndex]">
+            </PersistentString>
+            <PersistentString
+               value = "columns">
+            </PersistentString>
+            <PersistentString
+               value = "board[xIndex..&lt;board.endIndex]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Game.printBoard():game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "board.count">
+            </PersistentString>
+            <PersistentString
+               value = "board[i]?.count">
+            </PersistentString>
+            <PersistentString
+               value = "board[i]?[j]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
