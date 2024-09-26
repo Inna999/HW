@@ -9,9 +9,10 @@ import Foundation
 
 print("Введите строку: ")
 
-let wordRead = readLine()
+let word = readLine()
 
-if let word = wordRead {
-    print(cutMiddle(word))
+if var word {
+    cutMiddle(&word)
+    print(word)
 }
 

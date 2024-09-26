@@ -7,20 +7,16 @@
 
 import Foundation
 
-func cutMiddle(_ word: String) -> String {
-    var resultWord: String = word
+func cutMiddle(_ word: inout String) {
     
     func removeMiddleChar () {
-        resultWord.remove(
-            at: resultWord.index(resultWord.startIndex, offsetBy: resultWord.count / 2)
-        )
+        word.remove(at: word.index(word.startIndex, offsetBy: word.count / 2))
     }
     
-    if word.count % 2 != 0 {
+    if !word.count.isMultiple(of: 2) {
         removeMiddleChar()
     } else {
         removeMiddleChar()
         removeMiddleChar()
     }
-    return resultWord
 }
