@@ -10,7 +10,6 @@ import Foundation
 print("Введите URL-адрес:")
 let urlRead = readLine()
 
-if let url = urlRead {
-    printParametersFromUrl(url)
+if let urlRead {
+    printParametersFromUrl(urlRead)
 }
-

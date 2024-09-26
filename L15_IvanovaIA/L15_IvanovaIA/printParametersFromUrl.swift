@@ -12,7 +12,8 @@ func printParametersFromUrl(_ url: String) {
     var switchKey: Bool = true
     var key: String = ""
     var value: String = ""
-    var pass: String = ""
+    var password: String = ""
+    let pass: String = "pass"
     
     for char in url {
         // пропускаем символы которые до параметров идут (до ?)
@@ -21,37 +22,35 @@ func printParametersFromUrl(_ url: String) {
             continue
         }
         if beginParameters {
-            // собираем ключ
-            if char != "=" && switchKey {
-                key += String(char)
-            // ключ закончился - переключаемся на значение
-            } else if char == "=" && switchKey {
+            // собираем ключ - значение
+            switch switchKey {
+            case true where char == "=":
                 switchKey = false
-            // собираем значение
-            } else if char != "&" && !switchKey {
-                value += String(char)
-            // выводим на печать
-            } else if char == "&" && !switchKey {
+            case true:
+                key += String(char)
+            case false where char == "&":
                 switchKey = true
                 // если попался пароль запоминаем
-                if key == "pass" {
-                    pass = value
+                if key == pass {
+                    password = value
                 }
-                print("\(key) : \(value != "" ? value : "not found")")
+                print("\(key) : \(!value.isEmpty ? value : "not found")")
                 key = ""
                 value = ""
+            case false:
+                value += String(char)
             }
         }
     }
     // обрабатываем последний параметр
-    if key != "" {
-        if key == "pass" {
-            pass = value
+    if !key.isEmpty {
+        if key == pass {
+            password = value
         }
-        print("\(key) : \(value != "" ? value : "not found")")
+        print("\(key) : \(!value.isEmpty ? value : "not found")")
     }
     // выводим пароль
-    if pass != "" {
-        print("Password: \(pass)")
+    if !password.isEmpty {
+        print("Password: \(password)")
     }
 }
