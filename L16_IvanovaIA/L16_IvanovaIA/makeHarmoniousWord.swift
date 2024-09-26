@@ -12,16 +12,12 @@ func makeHarmoniousWord(_ word: String) -> Int {
     /// счетчик количества повторений
     var repeatCount: Int = 1
     /// переключатель гласные/согласные
-    var vowelSwitch: Bool
+    var vowelSwitch: Bool = false
     var result: Int = 0
     
     /// функция определения гласная - согласная
     func identifyVowel(_ char: Character) -> Bool {
-        if vowels.contains(char) {
-            return true
-        } else {
-            return false
-        }
+        vowels.contains(char)
     }
     
     // Первый символ определим отдельно
@@ -31,8 +27,8 @@ func makeHarmoniousWord(_ word: String) -> Int {
     
     for char in wordNew {
         // если согласная или гласная повторяется
-        if (vowels.contains(char) && vowelSwitch)
-            || (!vowels.contains(char) && !vowelSwitch) {
+        if (identifyVowel(char) && vowelSwitch) ||
+           (!identifyVowel(char) && !vowelSwitch) {
                 repeatCount += 1
         } else {
             if repeatCount > 2 {

@@ -8,8 +8,8 @@
 import Foundation
 
 print("Введите слово:")
-let wordRead = readLine()
+let word = readLine()
 
-if let word = wordRead {
+if let word {
     print(makeHarmoniousWord(word))
 }
