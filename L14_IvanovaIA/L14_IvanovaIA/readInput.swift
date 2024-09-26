@@ -9,8 +9,8 @@ import Foundation
 
 func readInput() -> [Int] {
     print("Введите параметры: ")
-    let parametersRead = readLine()
-    guard let parameters = parametersRead else {
+    let parameters = readLine()
+    guard let parameters else {
         return []
     }
     var resultInput = [Int]()

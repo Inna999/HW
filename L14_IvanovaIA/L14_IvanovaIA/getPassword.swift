@@ -10,17 +10,14 @@ import Foundation
 func getPassword(_ parameters: [Int]) -> String {
     let alphabet = "abcdefghijklmnopqrstuvwxyz"
     let N = parameters[3]
-    var password = [String]()
-    for _ in 0..<N {
-        password.append("")
-    }
+    var password: [String] = Array(repeating: "", count: N)
     
     // поиск рандомного места в пароле для нового символа
     func findPlace () -> Int {
-        var place: Int
+        var place: Int = 0
         repeat {
             place = Int.random(in: 0..<N)
-        } while password[place] != ""
+        } while !password[place].isEmpty
         return place
     }
     
@@ -39,25 +36,25 @@ func getPassword(_ parameters: [Int]) -> String {
         }
     }
     //добавляем прописные буквы
-    addNewChars(parameters[0], place: findPlace()) {alphabet.randomElement()?.uppercased()}
+    addNewChars(parameters[0], place: findPlace()) { alphabet.randomElement()?.uppercased() }
  
     // добавляем строчные буквы
-    addNewChars(parameters[1], place: findPlace()) {alphabet.randomElement()?.lowercased()}
+    addNewChars(parameters[1], place: findPlace()) { alphabet.randomElement()?.lowercased() }
     
     // добавляем цифры
-    addNewChars(parameters[2], place: findPlace()) {String(Int.random(in: 0...9))}
+    addNewChars(parameters[2], place: findPlace()) { String(Int.random(in: 0...9)) }
     
     // если не все символы заполнены - заполняем рандомно разными знаками
     for i in 0..<N {
-        if password[i] == "" {
+        if password[i].isEmpty {
             let random = Int.random(in: 0...2)
             switch random{
             case 0:
-                addNewChars(1, place: i) {alphabet.randomElement()?.uppercased()}
+                addNewChars(1, place: i) { alphabet.randomElement()?.uppercased() }
             case 1:
-                addNewChars(1, place: i) {alphabet.randomElement()?.lowercased()}
+                addNewChars(1, place: i) { alphabet.randomElement()?.lowercased() }
             default:
-                addNewChars(1, place: i) {String(Int.random(in: 0...9))}
+                addNewChars(1, place: i) { String(Int.random(in: 0...9)) }
             }
         }
     }
