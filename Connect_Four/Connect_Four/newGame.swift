@@ -55,6 +55,6 @@ func newGame(_ board: (rows: Int, columns: Int), _ player: (first: Player, secon
             return GameResult.drawGame
         }
         // меняем игрока для следующего хода
-        currentPlayer = currentPlayer.name == player.first.name ? player.second : player.first
+        currentPlayer = currentPlayer == player.first ? player.second : player.first
     } while true
 }

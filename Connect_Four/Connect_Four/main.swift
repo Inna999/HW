@@ -40,7 +40,7 @@ if gameCount < 2 {
             gameScore.scoreFirstPlayer += 1
             gameScore.scoreSecondPlayer += 1
         case GameResult.playerWon(let playerWon):
-            if playerWon.name == player.first.name {
+            if playerWon == player.first {
                 gameScore.scoreFirstPlayer += 2
             } else {
                 gameScore.scoreSecondPlayer += 2

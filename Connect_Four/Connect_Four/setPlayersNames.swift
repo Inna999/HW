@@ -13,6 +13,12 @@ struct Player {
     let char: String
 }
 
+//перегрузка эквивалентности для типа Игрок
+func == (left: Player, right: Player) -> Bool {
+    (left.name == right.name) && (left.char == right.char)
+    //в контексте задачи можно сделать только left.name == right.name
+}
+
 // определяем имена игроков и возвращаем экземпляры типа Иргок
 func setPlayersNames() -> (first: Player, second: Player) {
     print("First player's name: ")
