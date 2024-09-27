@@ -9,7 +9,7 @@ import Foundation
    
 func findEnglishSequence(_ string: String) -> Bool {
     let alphabet: String = "abcdefghijklmnopqrstuvwxyz"
-    if string == "" {
+    if string.isEmpty {
         return true
     }
     return alphabet.contains(string)

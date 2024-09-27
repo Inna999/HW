@@ -8,9 +8,9 @@
 import Foundation
 
 print("Введите строку: ")
-let stringRead = readLine()
+let string = readLine()
 
-if let string = stringRead {
+if let string {
     print(findEnglishSequence(string))
 }
 
