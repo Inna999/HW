@@ -16,7 +16,7 @@ func multipleGame() -> Int {
         Input a number of games:
         """)
         let count = readLine()
-        if count == "" {
+        if let count, count.isEmpty {
             return 1
         }
         if let input = Int(count ?? "0"), input > 0 {

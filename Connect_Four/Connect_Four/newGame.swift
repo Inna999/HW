@@ -23,7 +23,6 @@ func newGame(_ board: (rows: Int, columns: Int), _ player: (first: Player, secon
     repeat {
         // делаем ход
         var gameTurn: (turnSuccess: Bool, gameOver: Bool) = (false, false)
-        
         repeat {
             do {
                 gameTurn = try game.gameTurn(currentPlayer)
@@ -51,7 +50,7 @@ func newGame(_ board: (rows: Int, columns: Int), _ player: (first: Player, secon
             return GameResult.playerWon(currentPlayer)
         }
         // проверяем на ничью
-        if !game.board.map {$0.contains(" ")} .contains(true) {
+        if !game.board.map({ $0.contains(" ") }).contains(true) {
             print("It's a draw")
             return GameResult.drawGame
         }

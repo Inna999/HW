@@ -16,7 +16,7 @@ func setBoardDimension() -> (rows: Int, columns: Int) {
         """)
         let boardDimensions = readLine()
         // установка значения доски по умолчанию 6x7
-        if boardDimensions == "" {
+        if let boardDimensions, boardDimensions.isEmpty {
             return (6, 7)
         }
         

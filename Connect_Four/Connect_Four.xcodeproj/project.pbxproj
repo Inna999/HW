@@ -68,10 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				9D1A9C352C9C541800F4248A /* main.swift */,
-				9D2717CE2C9D517400919B36 /* gameDeclaration.swift */,
-				9D1A9C3C2C9C671A00F4248A /* setBoardDimension.swift */,
 				9D1A9C3E2C9C6E8200F4248A /* setPlayersNames.swift */,
+				9D1A9C3C2C9C671A00F4248A /* setBoardDimension.swift */,
 				9D3B7B0B2CA1AFCD0003253B /* multipleGame.swift */,
+				9D2717CE2C9D517400919B36 /* gameDeclaration.swift */,
 				9D2D8B6B2CA299B00076962C /* newGame.swift */,
 			);
 			path = Connect_Four;

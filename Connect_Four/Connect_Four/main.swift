@@ -26,10 +26,13 @@ if gameCount < 2 {
 
 // мульти игра
 } else {
-    // массив для хранения результатов игр
+    // кортеж для хранения результатов игр
     var gameScore: (scoreFirstPlayer: Int, scoreSecondPlayer: Int) = (0,0)
+    
     print("Total \(gameCount) games")
-   
+    // флаг окончания игры
+    var gameOver: Bool = false
+    
     for game in 1...gameCount {
         print("Game #\(game)")
         switch try newGame(board, game % 2 != 0 ? player : (player.second, player.first)) {
@@ -43,6 +46,9 @@ if gameCount < 2 {
                 gameScore.scoreSecondPlayer += 2
             }
         case GameResult.gameOver:
+            gameOver = true
+        }
+        if gameOver {
             break
         }
         print("\(player.first.name): \(gameScore.scoreFirstPlayer) \(player.second.name): \(gameScore.scoreSecondPlayer)")
