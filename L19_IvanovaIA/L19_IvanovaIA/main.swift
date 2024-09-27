@@ -8,11 +8,11 @@
 import Foundation
 
 print("Введите строку: ")
-let stringRead = readLine()
+let string = readLine()
 print("Введите подстроку: ")
-let substringRead = readLine()
+let substring = readLine()
 
-if let string = stringRead, let substring = substringRead, string != "", substring != "" {
+if let string, let substring, !string.isEmpty, !substring.isEmpty {
     print(countSubstring(in: string, substring))
 }
 
