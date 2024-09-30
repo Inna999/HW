@@ -90,18 +90,30 @@ class GameScene: SKScene {
     //вызывается при прекращении нажатия на экран
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            let touchLocation = touch.location(in: self)
+//            let touchLocation = touch.location(in: self)
+//            
+//            guard let touchedNode = self.atPoint(touchLocation) as? SKShapeNode,
+//                  touchedNode.name == "counterClockwiseButton" ||
+//                  touchedNode.name == "clockwiseButton"
+//            else {
+//                        return
+//            }
             
-            guard let touchedNode = self.atPoint(touchLocation) as? SKShapeNode,
-                  touchedNode.name == "counterClockwiseButton" ||
-                    touchedNode.name == "clockwiseButton" else {
-                        return
+            if let node = self.childNode(withName: "clockwiseButton") as? SKShapeNode,
+               node.fillColor == .green {
+                node.fillColor = .gray
             }
-            touchedNode.fillColor = .gray
+            if let node = self.childNode(withName: "counterClockwiseButton") as? SKShapeNode,
+               node.fillColor == .green {
+                node.fillColor = .gray
+            }
+            
         }
     }
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
     }
+    
     override func update(_ currentTime: TimeInterval) {
         snake!.move()
     }
