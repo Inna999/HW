@@ -14,10 +14,18 @@ func readInput() -> [Int] {
         return []
     }
     var resultInput = [Int]()
-    for char in parameters {
+    var param: String = ""
+    for char in parameters.trimmingCharacters(in: .whitespaces) {
+        
         if char != " " {
-            resultInput.append(char.wholeNumberValue ?? 0)
+            param.append(char)
+        } else {
+            resultInput.append(Int(param) ?? 0)
+            param = ""
         }
     }
+    // добавляем последний параметр
+    resultInput.append(Int(param) ?? 0)
+    
     return resultInput
 }
