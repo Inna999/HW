@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "56218BCB-7BAF-4DC4-A60E-263D7D75E6B6"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BF93E50-6AF4-47C0-81B6-9387EA9C0C5D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Connect_Four/setBoardDimension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "setBoardDimension()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "7BF93E50-6AF4-47C0-81B6-9387EA9C0C5D - 3a94d7ef9dc099ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_Four.setBoardDimension() -&gt; (rows: Swift.Int, columns: Swift.Int)"
+                  moduleName = "Connect_Four"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/inna/Desktop/test/Connect_Four/Connect_Four/setBoardDimension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1147">
+               </Location>
+               <Location
+                  uuid = "7BF93E50-6AF4-47C0-81B6-9387EA9C0C5D - 3a94d7ef9dc098d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_Four.setBoardDimension() -&gt; (rows: Swift.Int, columns: Swift.Int)"
+                  moduleName = "Connect_Four"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/inna/Desktop/test/Connect_Four/Connect_Four/setBoardDimension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1158">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
